@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  min-width: 100%;
+  max-height: 100vh;
+}
+
+body {
+  background-image: url('https://assets.codepen.io/6060109/ZigZag.png');
+  background-size: cover;
+}
+
+h2, h4, h5, a, button {
+  font-family: Montserrat;
+}
+
+.all-container {
+  display: flex;
+  justify-content: center;
+}
+
+.panel {
+  width: 90%;
+  height: 575px;
+  min-width: 275px;
+  max-width: 350px;
+  background-color: white;
+  margin: 65px 0;
+  box-shadow: 0px 40px 40px -20px #3C7B61;
+  /*filter: drop-shadow(0px 40px 20px #3C7B61);*/
+  border-radius: 5px;
+  position: relative;
+}
+
+.confirmation-panel {
+  height: 625px;
+}
+
+.close-button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.top-container {
+  width: 100%;
+  text-align: center;
+  padding: 55px 35px 30px;
+}
+
+.top-container > img {
+  width: 50%;
+}
+
+.top-container h2 {
+  margin: 25px 0 15px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #2F463D;
+}
+
+.top-container p {
+  font-family: Ubuntu;
+  font-weight: 300; 
+  line-height: 27px;
+  letter-spacing: .1px;
+  color: #828282;
+}
+
+.food-selected {
+  background-color: #E9FAF0;
+  line-height: 17px;
+  border-radius: 5px;
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-items {
+  width: 50%;
+  padding: 0 15px;
+  font-size: 14px;
+  flex-grow: 2.5;
+}
+
+.menu-items h4 {
+  font-weight: 800;
+  color: #2F463D;
+}
+
+.menu-items h5 {
+  font-weight: 500;
+  color: #7A8F85;
+}
+
+.food-selected a {
+  padding-right: 15px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #467A66;
+}
+
+#button-confirmation {
+  text-align: center;
+}
+
+button {
+  width: 83%;
+  height: 55px;
+  border: 0px; 
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  box-shadow: 0px 20px 20px rgba(167, 167, 167, 0.2);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+  transition: .4s ease all;
+}
+
+#button-confirmation button {
+  margin: 35px 15px;
+  background-color: #46A67E;
+  color: #FFFFFF;
+}
+  
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: .5s ease all;
+  transform: translateY(1px);
+}
+
+.dots-ctr {
+  margin: auto;
+  width: 55px;
+  height: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: #bbb;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.dot-effect {
+  background: #67BD99;
+}
+
+.dish-panel, .order-process-panel {
+  display: none;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+  .confirmation-panel {
+    z-index: 9;
+    max-width: 375px;
+    min-width: 375px;
+    width: 375px;
+  }
+  
+  .dish-panel, .order-process-panel {
+    display: block;
+    align-self: center;
+    z-index: 1;
+  }
+  
+  .dish-panel {
+    margin-right: -15px; 
+  }
+    
+  .order-process-panel {
+    margin-left: -15px; 
+  }
+  
+  .inactive-button {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 15%;
+    
+  }
+  
+  .inactive-button button {
+    background-color: #BDBDBD;
+    color: #FFFFFF;
+  }
+  
+  .dish-panel .dots-ctr {
+    position: absolute;
+    left: 50%;
+    bottom: 6.5%;
+    transform: translateX(-50%); 
+  }
+  
+  .order-process-panel .dots-ctr {
+    position: absolute;
+    left: 50%;
+    bottom: 6.5%;
+    transform: translateX(-50%); 
+  }
+}
